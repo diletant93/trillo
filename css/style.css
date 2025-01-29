@@ -59,6 +59,10 @@ body {
   color: var(--color-grey-dark-2);
 }
 
+.logo {
+  height: 3.5rem;
+}
+
 body {
   background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
   background-repeat: no-repeat;
