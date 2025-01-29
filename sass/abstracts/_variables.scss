@@ -11,11 +11,17 @@
     --color-grey-light-4: #ccc;
   
     /* Dark Grey Colors */
-    --color-grey-dark-1: #333;
+    --color-grey-dark-1: #999;
     --color-grey-dark-2: #777;
-    --color-grey-dark-3: #999;
+    --color-grey-dark-3: #333;
 
     /*Shadows*/
     --shadow-large: 0 2rem 6rem rgba(0,0,0,.6);
+
+    /*font sizes*/
+    --font-size-default:1.6rem;
+    --font-size-small:1.25rem;
+    --font-size-extra-small:1rem;
+    
   }
   

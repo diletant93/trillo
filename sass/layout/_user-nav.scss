@@ -1,3 +1,43 @@
 .user-nav{
-    
+    @include flex-center-center;
+    align-self: stretch;
+    & > *{
+        cursor: pointer;
+        height: 100%;
+        @include flex-center-center;
+        padding: 0 2rem;
+    }
+    &>*:hover{
+        background-color: var(--color-grey-light-1);
+    }
+    &__icon-box{
+        position: relative;
+    }
+    &__icon{
+        height: 2.25rem;
+        aspect-ratio: 1;
+        margin-right: -.8rem;
+        fill: var(--color-grey-dark-2);
+    }
+    &__notification{
+        @include flex-center-center;
+        height: 1.6rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: var(--color-primary);
+        color: #fff;
+        font-size: var(--font-size-extra-small);
+        margin-top: -2rem;
+    }
+    &__user{
+        @include flex-center-center;
+        gap:.5rem;
+    }
+    &__user-photo{
+        height: 3.5rem;
+        border-radius: 50%;
+    }
+    &__user-name{
+        font-size: var(--font-size-small);
+    }
 }

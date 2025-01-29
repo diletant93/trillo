@@ -1,5 +1,5 @@
 .header{
+    @include flex-between-center;
     background-color: #fff;   
     border-bottom: var(--color-grey-light-2);
-    padding:2rem 1rem;
 }

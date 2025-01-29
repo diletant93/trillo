@@ -17,12 +17,15 @@ li{
 }
 button{
     border: none;
+    background-color: transparent;
     font-family: inherit;
     color: inherit;
 }
 input{
+    border: none;
     color: inherit;
     font-family: inherit;
+    font-size: inherit;
 }
 html {
     font-size: 62.5%;
