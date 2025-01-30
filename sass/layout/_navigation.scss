@@ -1,5 +1,9 @@
 .navigation{
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: var(--color-grey-dark-3);
     flex:0 1 18%;
-    padding: 2rem;
+    
 }

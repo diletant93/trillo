@@ -15,9 +15,11 @@
   /*Shadows*/
   --shadow-large: 0 2rem 6rem rgba(0,0,0,.6);
   /*font sizes*/
-  --font-size-default:1.6rem;
-  --font-size-small:1.25rem;
   --font-size-extra-small:1rem;
+  --font-size-small:1.25rem;
+  --font-size-medium:1.4rem;
+  --font-size-default:1.6rem;
+  --font-size-large:1.8rem;
 }
 
 *, *::after, *::before {
@@ -108,6 +110,66 @@ body {
   fill: var(--color-grey-dark-2);
 }
 
+.nav-list {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.nav-list__item {
+  flex-grow: 1;
+  padding: 1.5rem;
+  position: relative;
+}
+.nav-list__item::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-color: var(--color-primary);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.3rem;
+  transform: scaleY(0);
+  transition: transform 0.2s, width 0.3s cubic-bezier(1, 0, 0, 1) 0.2s;
+  z-index: 5, background-color 0.1s;
+}
+.nav-list__item:hover::before, .nav-list__item--active::before {
+  width: 100%;
+  transform: scaleY(1);
+}
+.nav-list__item:active::before {
+  background-color: var(--color-primary-light);
+}
+.nav-list__link:visited, .nav-list__link:link {
+  margin-left: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--color-grey-light-1);
+  gap: 2rem;
+  position: relative;
+  z-index: 10;
+}
+.nav-list__icon {
+  height: 2.7rem;
+  aspect-ratio: 1;
+  fill: currentColor;
+}
+.nav-list__label {
+  text-transform: uppercase;
+  font-size: var(--font-size-large);
+}
+
+.gallery {
+  display: flex;
+}
+.gallery__photo {
+  width: 100%;
+  display: block;
+}
+
 body {
   background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
   background-repeat: no-repeat;
@@ -118,9 +180,12 @@ body {
 
 .container {
   max-width: 120rem;
+  min-height: 80rem;
   margin: 0 auto;
   background-color: var(--color-grey-light-2);
   box-shadow: var(--shadow-large);
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -132,9 +197,12 @@ body {
 }
 
 .navigation {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: var(--color-grey-dark-3);
   flex: 0 1 18%;
-  padding: 2rem;
 }
 
 .main {
@@ -143,6 +211,7 @@ body {
 
 .content {
   display: flex;
+  flex: 1 1 0;
 }
 
 .user-nav {
