@@ -1,0 +1,55 @@
+.review{
+    padding: 3rem;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    &::before{
+        content: '\201C';
+        position: absolute;
+        top: -2.8rem;
+        left: 0;
+        color: var(--color-grey-light-2);
+        font-size: 20rem;
+        line-height: 1;
+        z-index: 5;
+        font-family: sans-serif;
+    }
+    &__text{
+        color:var(--color-grey-dark-3);
+        font-size: var(--font-size-small);
+        max-width: 92%;
+        margin-bottom: 2rem;
+        position: relative;
+        z-index: 10;
+    }
+    &__user{
+        display: flex;
+        align-items: center;
+    }
+    &__photo{
+        height: 4rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+    }
+    &__user-box{
+        @include Yflex-start-center;
+        margin-left: 1rem;
+    }
+    &__user-name{
+        color:var(--color-grey-dark-3);
+        font-size: var(--font-size-very-small);
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    &__user-date{
+        font-size: var(--font-size-extra-small);
+    }
+    &__rating{
+        margin-left: auto;
+        font-size: var(--font-size-large);
+        color:var(--color-primary);
+    }
+    &__btn-inline{
+        color: var(--color-primary);
+    }
+}

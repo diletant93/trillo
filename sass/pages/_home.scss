@@ -23,6 +23,21 @@
     }
 }
 .user-reviews{
-    background: red;
     flex: 1;
+    @include Yflex-center-center;
+    gap: 2rem;
+}
+.cta{
+    @include Yflex-center-center;
+    gap: 2rem;
+    padding: 2.8rem .5rem 4rem;
+    &__book-now{
+        font-size: var(--font-size-large);
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    &__btn{
+        padding: 1.5rem 7rem;
+    }
+
 }

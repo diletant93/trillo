@@ -21,12 +21,20 @@
 
     /*font sizes*/
     --font-size-extra-small:1rem;
+    --font-size-very-small:1.15rem;
     --font-size-small:1.25rem;
     --font-size-medium:1.4rem;
     --font-size-default:1.6rem;
     --font-size-large:1.8rem;
     --font-size-extra-large:2.2rem;
-    
+    /*line height*/
+    --line-height-default:1.6;
+    /*lines*/  
     --line:.1rem solid var(--color-grey-light-2);
+
+    /*border radius*/
+    --rounded-full:100rem;
   }
+
+
   

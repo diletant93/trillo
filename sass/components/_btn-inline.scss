@@ -1,11 +1,20 @@
 .btn-inline{
-    text-decoration: underline;
-    text-underline-offset: .3rem;
+    border-bottom:.1rem solid var(--color-primary);
+    padding-bottom: .3rem;
     font-weight: 700;
     &:hover{
         color: var(--color-grey-dark-3);
+        border-bottom:.1rem solid var(--color-grey-dark-3);
+    }
+    &:hover &__span{
+        margin-left: .8rem;
     }
     &--animated:hover{
         animation: scaleUpAndDown .7s infinite ease-in-out;
+    }
+    &__span{
+        font-weight: 500;
+        margin-left: .3rem;
+        transition: margin-left .3s;
     }
 }
