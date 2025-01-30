@@ -36,5 +36,9 @@
     --rounded-full:100rem;
   }
 
-
-  
+  /*screen breakpoints*/
+  $bp-smallest:30.625rem;
+  $bp-small:37.5rem;
+  $bp-medium:56.25rem;
+  $bp-large: 68.75rem;
+  $bp-largest:75rem;

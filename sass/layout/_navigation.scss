@@ -8,4 +8,10 @@
     &__legal{
         padding:2rem;
     }
+    @media (max-width: $bp-large){
+     &__legal{
+        display: none;
+     }
+     flex-basis: auto;
+    }
 }

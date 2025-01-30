@@ -6,6 +6,7 @@
     &__item{
         flex-grow: 1;
         padding: 1.5rem;
+        padding-right: 3rem;
         position: relative;
     }
     &__item::before{
@@ -46,5 +47,18 @@
     &__label{
         text-transform: uppercase;
         font-size: var(--font-size-large);
+    }
+
+    @media (max-width: $bp-medium){
+        flex-direction: row;
+        margin-top: 0;
+        &__item{
+            @include Xflex-center-center;
+        }
+    }
+    @media (max-width: $bp-small){
+        &__label{
+            display: none;
+        }
     }
 }

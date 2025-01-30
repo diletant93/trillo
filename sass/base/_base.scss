@@ -32,4 +32,7 @@ input{
 html {
     font-size: 62.5%;
     box-sizing: border-box;
+    @media (max-width: $bp-large){
+        font-size: 50%;
+    }
 }

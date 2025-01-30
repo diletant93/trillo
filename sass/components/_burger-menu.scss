@@ -1,0 +1,38 @@
+.burger-menu {
+    display: none;
+    
+    @media (max-width: $bp-smallest) {
+        display: block;
+    }
+    
+    &__checkbox {
+        display: none;
+    }
+    &__span {
+        display: block;  // Changed from inline-block
+        width: 4rem;
+        height: 0.3rem;  // Using consistent decimal notation
+        background-color: var(--color-grey-dark-3);
+        position: relative;
+        
+        &::before,
+        &::after {
+            content: "";
+            display: block;  // Changed from inline-block
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-grey-dark-3);
+            position: absolute;
+            left: 0;
+            transition: all 0.2s;  // Added for smooth animation
+        }
+        
+        &::before {
+            top: -0.9rem;  // Using consistent decimal notation
+        }
+        
+        &::after {
+            bottom: -0.9rem;  // Using consistent decimal notation
+        }
+    }
+}

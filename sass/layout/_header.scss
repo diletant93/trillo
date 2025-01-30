@@ -2,4 +2,7 @@
     @include Xflex-between-center;
     background-color: #fff;   
     border-bottom: var(--line);
+    @media (max-width:$bp-smallest){
+        padding-right: 2.5rem;
+    }
 }

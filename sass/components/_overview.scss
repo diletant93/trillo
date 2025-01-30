@@ -47,4 +47,24 @@
         font-size: var(--font-size-small);
         text-transform: uppercase;
     }
+    @media (max-width: $bp-small){
+        &{
+            padding: 2rem 1rem;   
+        }
+        &__rating{
+            display: none;
+        }
+    }
+    @media (max-width:$bp-smallest){
+        &{
+            @include Xflex-between-center;
+        }
+        &__heading{
+            margin: 0;
+            font-size: var(--font-size-large);
+        }
+        &__location{
+            margin: 0;
+        }
+    }
 }

@@ -13,6 +13,40 @@
 </head>
 
 <body>
+    <div class="mobile-user-nav" id="mobile-user-nav">
+        <div class="burger-menu">
+            <input type="radio" class="burger-menu__checkbox" id="radio-close" name="radio-open-close"/>
+            <label for="radio-close" class="burger-menu__button burger-menu__button--close">
+                <span class="burger-menu__span"></span>
+            </label>
+        </div>
+        
+        <nav class="user-nav">
+                
+            <div class="user-nav__icon-box">
+                <p class="user-nav__paragraph">
+                    Saved
+                </p>
+                <svg class="user-nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+                </svg>
+                <span class="user-nav__notification">7</span>
+            </div>
+            <div class="user-nav__icon-box">
+                <p class="user-nav__paragraph">
+                    Notifications
+                </p>
+                <svg class="user-nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-chat"></use>
+                </svg>
+                <span class="user-nav__notification">17</span>
+            </div>
+            <div class="user-nav__user">
+                <img src="img/user.jpg" alt="" class="user-nav__user-photo" />
+                <span class="user-nav__user-name">Bob</span>
+            </div>
+        </nav>
+    </div>
     <div class="container">
         <header class="header">
             <img src="img/logo.png" alt="" class="logo" />
@@ -24,7 +58,14 @@
                     </svg>
                 </button>
             </form>
+            <div class="burger-menu">
+                <input type="radio" class="burger-menu__checkbox" id="radio-open" name="radio-open-close"/>
+                <label for="radio-open" class="burger-menu__button burger-menu__button--open">
+                    <span class="burger-menu__span"></span>
+                </label>
+            </div>
             <nav class="user-nav">
+                
                 <div class="user-nav__icon-box">
                     <svg class="user-nav__icon">
                         <use xlink:href="img/sprite.svg#icon-bookmark"></use>
@@ -171,7 +212,7 @@
                             </div>
                         </div>
                         <div class="user-reviews">
-                            <figure class="review">
+                            <figure class="user-reviews__review review">
                                 <blockquote class="review__text">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi, totam, itaque officia ex.
                                 </blockquote>
@@ -184,7 +225,7 @@
                                     <div class="review__rating">7.8</div>
                                 </figcaption>
                             </figure>
-                            <figure class="review">
+                            <figure class="user-reviews__review review">
                                 <blockquote class="review__text">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi, totam, itaque officia ex.
                                 </blockquote>

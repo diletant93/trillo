@@ -13,6 +13,10 @@
     &__icon-box{
         position: relative;
     }
+    &__paragraph{
+        font-size: var(--font-size-extra-large);
+        margin-right: auto;
+    }
     &__icon{
         height: 2.25rem;
         aspect-ratio: 1;
@@ -39,5 +43,8 @@
     }
     &__user-name{
         font-size: var(--font-size-small);
+    }
+    @media (max-width:$bp-smallest){
+        display: none;
     }
 }
