@@ -8,10 +8,19 @@
 }
 .description{
     background: #fff;
-    padding: 3rem;
+    padding: 3rem 3rem 5rem;
     flex-basis: 60%;
     box-shadow: var(--shadow-extra-light);
     font-size: var(--font-size-medium);
+    display: flex;
+    flex-direction: column;
+    &__paragraph:first-child{
+        margin-bottom: 2rem;
+    }
+    &__list{
+        margin: 3rem 0;
+        padding: 4rem 0;
+    }
 }
 .user-reviews{
     background: red;

@@ -1,0 +1,14 @@
+.recommend{
+    @include Xflex-between-center;
+    font-size: var(--font-size-small);
+    &__photo{
+        height: 4rem;
+        aspect-ratio: 1;
+        object-fit: cover;
+        border-radius: 50%;
+        outline: .3rem solid #fff;
+        &:not(:first-child){
+            margin-left: -1.3rem;
+        }
+    }
+}

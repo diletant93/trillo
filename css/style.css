@@ -22,7 +22,7 @@
   --font-size-default:1.6rem;
   --font-size-large:1.8rem;
   --font-size-extra-large:2.2rem;
-  --line:.1rem solid var(var(--color-grey-light-2));
+  --line:.1rem solid var(--color-grey-light-2);
 }
 
 @keyframes scaleUpAndDown {
@@ -254,9 +254,50 @@ body {
   animation: scaleUpAndDown 0.7s infinite ease-in-out;
 }
 
+.list {
+  display: flex;
+  border-top: var(--line);
+  border-bottom: var(--line);
+  flex-wrap: wrap;
+}
+.list__item {
+  flex: 0 0 50%;
+  padding-left: 2.4rem;
+}
+.list__item:not(:last-child) {
+  margin-bottom: 0.4rem;
+}
+.list__item::before {
+  content: "";
+  margin-right: 0.7rem;
+  height: 1rem;
+  width: 1rem;
+  display: inline-block;
+  background-color: var(--color-primary);
+  mask-image: url(../img/chevron-thin-right.svg);
+  mask-size: cover;
+}
+
 .legal {
   color: #fff;
   font-size: var(--font-size-small);
+}
+
+.recommend {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-small);
+}
+.recommend__photo {
+  height: 4rem;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  outline: 0.3rem solid #fff;
+}
+.recommend__photo:not(:first-child) {
+  margin-left: -1.3rem;
 }
 
 body {
@@ -367,10 +408,19 @@ body {
 
 .description {
   background: #fff;
-  padding: 3rem;
+  padding: 3rem 3rem 5rem;
   flex-basis: 60%;
   box-shadow: var(--shadow-extra-light);
   font-size: var(--font-size-medium);
+  display: flex;
+  flex-direction: column;
+}
+.description__paragraph:first-child {
+  margin-bottom: 2rem;
+}
+.description__list {
+  margin: 3rem 0;
+  padding: 4rem 0;
 }
 
 .user-reviews {
