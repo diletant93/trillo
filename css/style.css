@@ -20,8 +20,23 @@
   --font-size-medium:1.4rem;
   --font-size-default:1.6rem;
   --font-size-large:1.8rem;
+  --font-size-extra-large:2.2rem;
 }
 
+@keyframes scaleUpAndDown {
+  from {
+    transform: scale(1);
+    box-shadow: none;
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
+  }
+  to {
+    transform: scale(1);
+    box-shadow: none;
+  }
+}
 *, *::after, *::before {
   margin: 0;
   padding: 0;
@@ -47,6 +62,8 @@ button {
   background-color: transparent;
   font-family: inherit;
   color: inherit;
+  cursor: pointer;
+  font-size: inherit;
 }
 
 input {
@@ -168,6 +185,71 @@ body {
 .gallery__photo {
   width: 100%;
   display: block;
+}
+
+.overview {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 0.1rem solid var(---color-grey-dark-1);
+}
+.overview__heading {
+  text-transform: uppercase;
+  font-size: var(--font-size-extra-large);
+  font-weight: 400;
+  margin-right: 3rem;
+  margin-left: 3.5rem;
+}
+.overview__stars {
+  display: flex;
+  gap: 0.2rem;
+  color: var(--color-primary);
+}
+.overview__star-icon {
+  height: 2rem;
+  aspect-ratio: 1;
+  fill: currentColor;
+}
+.overview__location {
+  color: var(--color-primary);
+  margin-left: auto;
+  margin-right: 3rem;
+  display: flex;
+  align-items: center;
+}
+.overview__location-icon {
+  height: 2rem;
+  aspect-ratio: 1;
+  fill: currentColor;
+  margin-right: 0.8rem;
+}
+.overview__rating {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 1rem 2rem;
+}
+.overview__rating-average {
+  font-size: var(--font-size-extra-large);
+}
+.overview__rating-count {
+  font-size: var(--font-size-small);
+  text-transform: uppercase;
+}
+
+.btn-inline {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+  font-weight: 700;
+}
+.btn-inline:hover {
+  color: var(--color-grey-dark-3);
+}
+.btn-inline--animated:hover {
+  animation: scaleUpAndDown 0.7s infinite ease-in-out;
 }
 
 body {

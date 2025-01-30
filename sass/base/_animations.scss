@@ -1,0 +1,14 @@
+@keyframes scaleUpAndDown{
+    from{
+        transform: scale(1);
+        box-shadow: none;
+    }
+    50%{
+        transform: scale(1.2);
+        box-shadow: 0 1rem 4rem rgba($color: #000000, $alpha: .25);
+    }
+    to{
+        transform: scale(1);
+        box-shadow: none;
+    }
+}
