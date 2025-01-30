@@ -1,3 +1,19 @@
-.hotel-view{
-    
+
+.detail{
+    display: flex;
+    padding: 4.5rem;
+    gap: 4.5rem;
+    background-color: var(--color-grey-light-1);
+    border-bottom: var(--line);
+}
+.description{
+    background: #fff;
+    padding: 3rem;
+    flex-basis: 60%;
+    box-shadow: var(--shadow-extra-light);
+    font-size: var(--font-size-medium);
+}
+.user-reviews{
+    background: red;
+    flex: 1;
 }
